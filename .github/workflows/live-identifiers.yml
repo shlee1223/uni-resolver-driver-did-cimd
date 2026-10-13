@@ -1,0 +1,18 @@
+name: Live identifiers
+
+# Reports when a test identifier stops resolving, before the Universal Resolver's
+# own checks do.
+on:
+  schedule:
+    - cron: '17 5 * * 1'
+  workflow_dispatch:
+
+jobs:
+  resolve:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+      - run: npm run check:live

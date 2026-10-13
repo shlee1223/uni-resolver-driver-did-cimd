@@ -1,0 +1,16 @@
+{
+  "name": "uni-resolver-driver-did-cimd",
+  "version": "0.1.0",
+  "description": "Universal Resolver driver for the did:cimd DID method",
+  "license": "Apache-2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "node --test \"test/*.test.js\"",
+    "check:live": "node scripts/check-live-identifiers.js"
+  }
+}
